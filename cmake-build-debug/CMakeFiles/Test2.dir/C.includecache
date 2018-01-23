@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/josh/CLionProjects/Practice/Test2/integer.h
+stdio.h
+-
+
+/home/josh/CLionProjects/Practice/Test2/main.c
+stdio.h
+-
+stdlib.h
+-
+sll.h
+/home/josh/CLionProjects/Practice/Test2/sll.h
+integer.h
+/home/josh/CLionProjects/Practice/Test2/integer.h
+
+/home/josh/CLionProjects/Practice/Test2/sll.c
+stdio.h
+-
+stdlib.h
+-
+assert.h
+-
+sll.h
+/home/josh/CLionProjects/Practice/Test2/sll.h
+
+/home/josh/CLionProjects/Practice/Test2/sll.h
+stdio.h
+-
+
