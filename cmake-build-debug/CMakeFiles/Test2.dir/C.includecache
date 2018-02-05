@@ -6,21 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/home/josh/CLionProjects/Practice/Test2/integer.h
+/home/jrstringfellow/CS201/git/Assignment0/src/integer.h
 stdio.h
 -
 
-/home/josh/CLionProjects/Practice/Test2/main.c
+/home/jrstringfellow/CS201/git/Assignment0/src/main.c
 stdio.h
 -
 stdlib.h
 -
 sll.h
-/home/josh/CLionProjects/Practice/Test2/sll.h
+/home/jrstringfellow/CS201/git/Assignment0/src/sll.h
 integer.h
-/home/josh/CLionProjects/Practice/Test2/integer.h
+/home/jrstringfellow/CS201/git/Assignment0/src/integer.h
 
-/home/josh/CLionProjects/Practice/Test2/sll.c
+/home/jrstringfellow/CS201/git/Assignment0/src/sll.c
 stdio.h
 -
 stdlib.h
@@ -28,9 +28,9 @@ stdlib.h
 assert.h
 -
 sll.h
-/home/josh/CLionProjects/Practice/Test2/sll.h
+/home/jrstringfellow/CS201/git/Assignment0/src/sll.h
 
-/home/josh/CLionProjects/Practice/Test2/sll.h
+/home/jrstringfellow/CS201/git/Assignment0/src/sll.h
 stdio.h
 -
 

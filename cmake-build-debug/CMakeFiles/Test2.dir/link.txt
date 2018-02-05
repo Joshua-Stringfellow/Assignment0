@@ -1,1 +1,1 @@
-/usr/bin/cc -g   CMakeFiles/Test2.dir/main.c.o CMakeFiles/Test2.dir/sll.c.o  -o Test2 
+/usr/bin/cc -g   CMakeFiles/Test2.dir/src/main.c.o CMakeFiles/Test2.dir/src/sll.c.o  -o Test2 

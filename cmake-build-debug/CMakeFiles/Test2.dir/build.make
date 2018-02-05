@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/josh/programs/clion-2017.3.2/bin/cmake/bin/cmake
+CMAKE_COMMAND = /home/jrstringfellow/programs/clion-2017.3.3/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/josh/programs/clion-2017.3.2/bin/cmake/bin/cmake -E remove -f
+RM = /home/jrstringfellow/programs/clion-2017.3.3/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/josh/CLionProjects/Practice/Test2
+CMAKE_SOURCE_DIR = /home/jrstringfellow/CS201/git/Assignment0
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/josh/CLionProjects/Practice/Test2/cmake-build-debug
+CMAKE_BINARY_DIR = /home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Test2.dir/depend.make
@@ -57,67 +57,67 @@ include CMakeFiles/Test2.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Test2.dir/flags.make
 
-CMakeFiles/Test2.dir/main.c.o: CMakeFiles/Test2.dir/flags.make
-CMakeFiles/Test2.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/josh/CLionProjects/Practice/Test2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Test2.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Test2.dir/main.c.o   -c /home/josh/CLionProjects/Practice/Test2/main.c
+CMakeFiles/Test2.dir/src/main.c.o: CMakeFiles/Test2.dir/flags.make
+CMakeFiles/Test2.dir/src/main.c.o: ../src/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Test2.dir/src/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Test2.dir/src/main.c.o   -c /home/jrstringfellow/CS201/git/Assignment0/src/main.c
 
-CMakeFiles/Test2.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Test2.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/josh/CLionProjects/Practice/Test2/main.c > CMakeFiles/Test2.dir/main.c.i
+CMakeFiles/Test2.dir/src/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Test2.dir/src/main.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jrstringfellow/CS201/git/Assignment0/src/main.c > CMakeFiles/Test2.dir/src/main.c.i
 
-CMakeFiles/Test2.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Test2.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/josh/CLionProjects/Practice/Test2/main.c -o CMakeFiles/Test2.dir/main.c.s
+CMakeFiles/Test2.dir/src/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Test2.dir/src/main.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jrstringfellow/CS201/git/Assignment0/src/main.c -o CMakeFiles/Test2.dir/src/main.c.s
 
-CMakeFiles/Test2.dir/main.c.o.requires:
+CMakeFiles/Test2.dir/src/main.c.o.requires:
 
-.PHONY : CMakeFiles/Test2.dir/main.c.o.requires
+.PHONY : CMakeFiles/Test2.dir/src/main.c.o.requires
 
-CMakeFiles/Test2.dir/main.c.o.provides: CMakeFiles/Test2.dir/main.c.o.requires
-	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/main.c.o.provides.build
-.PHONY : CMakeFiles/Test2.dir/main.c.o.provides
+CMakeFiles/Test2.dir/src/main.c.o.provides: CMakeFiles/Test2.dir/src/main.c.o.requires
+	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/main.c.o.provides.build
+.PHONY : CMakeFiles/Test2.dir/src/main.c.o.provides
 
-CMakeFiles/Test2.dir/main.c.o.provides.build: CMakeFiles/Test2.dir/main.c.o
+CMakeFiles/Test2.dir/src/main.c.o.provides.build: CMakeFiles/Test2.dir/src/main.c.o
 
 
-CMakeFiles/Test2.dir/sll.c.o: CMakeFiles/Test2.dir/flags.make
-CMakeFiles/Test2.dir/sll.c.o: ../sll.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/josh/CLionProjects/Practice/Test2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Test2.dir/sll.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Test2.dir/sll.c.o   -c /home/josh/CLionProjects/Practice/Test2/sll.c
+CMakeFiles/Test2.dir/src/sll.c.o: CMakeFiles/Test2.dir/flags.make
+CMakeFiles/Test2.dir/src/sll.c.o: ../src/sll.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Test2.dir/src/sll.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Test2.dir/src/sll.c.o   -c /home/jrstringfellow/CS201/git/Assignment0/src/sll.c
 
-CMakeFiles/Test2.dir/sll.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Test2.dir/sll.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/josh/CLionProjects/Practice/Test2/sll.c > CMakeFiles/Test2.dir/sll.c.i
+CMakeFiles/Test2.dir/src/sll.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Test2.dir/src/sll.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jrstringfellow/CS201/git/Assignment0/src/sll.c > CMakeFiles/Test2.dir/src/sll.c.i
 
-CMakeFiles/Test2.dir/sll.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Test2.dir/sll.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/josh/CLionProjects/Practice/Test2/sll.c -o CMakeFiles/Test2.dir/sll.c.s
+CMakeFiles/Test2.dir/src/sll.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Test2.dir/src/sll.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jrstringfellow/CS201/git/Assignment0/src/sll.c -o CMakeFiles/Test2.dir/src/sll.c.s
 
-CMakeFiles/Test2.dir/sll.c.o.requires:
+CMakeFiles/Test2.dir/src/sll.c.o.requires:
 
-.PHONY : CMakeFiles/Test2.dir/sll.c.o.requires
+.PHONY : CMakeFiles/Test2.dir/src/sll.c.o.requires
 
-CMakeFiles/Test2.dir/sll.c.o.provides: CMakeFiles/Test2.dir/sll.c.o.requires
-	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/sll.c.o.provides.build
-.PHONY : CMakeFiles/Test2.dir/sll.c.o.provides
+CMakeFiles/Test2.dir/src/sll.c.o.provides: CMakeFiles/Test2.dir/src/sll.c.o.requires
+	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/sll.c.o.provides.build
+.PHONY : CMakeFiles/Test2.dir/src/sll.c.o.provides
 
-CMakeFiles/Test2.dir/sll.c.o.provides.build: CMakeFiles/Test2.dir/sll.c.o
+CMakeFiles/Test2.dir/src/sll.c.o.provides.build: CMakeFiles/Test2.dir/src/sll.c.o
 
 
 # Object files for target Test2
 Test2_OBJECTS = \
-"CMakeFiles/Test2.dir/main.c.o" \
-"CMakeFiles/Test2.dir/sll.c.o"
+"CMakeFiles/Test2.dir/src/main.c.o" \
+"CMakeFiles/Test2.dir/src/sll.c.o"
 
 # External object files for target Test2
 Test2_EXTERNAL_OBJECTS =
 
-Test2: CMakeFiles/Test2.dir/main.c.o
-Test2: CMakeFiles/Test2.dir/sll.c.o
+Test2: CMakeFiles/Test2.dir/src/main.c.o
+Test2: CMakeFiles/Test2.dir/src/sll.c.o
 Test2: CMakeFiles/Test2.dir/build.make
 Test2: CMakeFiles/Test2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/josh/CLionProjects/Practice/Test2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable Test2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable Test2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Test2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -125,8 +125,8 @@ CMakeFiles/Test2.dir/build: Test2
 
 .PHONY : CMakeFiles/Test2.dir/build
 
-CMakeFiles/Test2.dir/requires: CMakeFiles/Test2.dir/main.c.o.requires
-CMakeFiles/Test2.dir/requires: CMakeFiles/Test2.dir/sll.c.o.requires
+CMakeFiles/Test2.dir/requires: CMakeFiles/Test2.dir/src/main.c.o.requires
+CMakeFiles/Test2.dir/requires: CMakeFiles/Test2.dir/src/sll.c.o.requires
 
 .PHONY : CMakeFiles/Test2.dir/requires
 
@@ -135,6 +135,6 @@ CMakeFiles/Test2.dir/clean:
 .PHONY : CMakeFiles/Test2.dir/clean
 
 CMakeFiles/Test2.dir/depend:
-	cd /home/josh/CLionProjects/Practice/Test2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/josh/CLionProjects/Practice/Test2 /home/josh/CLionProjects/Practice/Test2 /home/josh/CLionProjects/Practice/Test2/cmake-build-debug /home/josh/CLionProjects/Practice/Test2/cmake-build-debug /home/josh/CLionProjects/Practice/Test2/cmake-build-debug/CMakeFiles/Test2.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jrstringfellow/CS201/git/Assignment0 /home/jrstringfellow/CS201/git/Assignment0 /home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug /home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug /home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles/Test2.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Test2.dir/depend
 

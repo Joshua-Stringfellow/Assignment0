@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/josh/programs/clion-2017.3.2/bin/cmake/bin/cmake
+CMAKE_COMMAND = /home/jrstringfellow/programs/clion-2017.3.3/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/josh/programs/clion-2017.3.2/bin/cmake/bin/cmake -E remove -f
+RM = /home/jrstringfellow/programs/clion-2017.3.3/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/josh/CLionProjects/Practice/Test2
+CMAKE_SOURCE_DIR = /home/jrstringfellow/CS201/git/Assignment0
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/josh/CLionProjects/Practice/Test2/cmake-build-debug
+CMAKE_BINARY_DIR = /home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/josh/CLionProjects/Practice/Test2/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/josh/programs/clion-2017.3.2/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/jrstringfellow/programs/clion-2017.3.3/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/josh/programs/clion-2017.3.2/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/jrstringfellow/programs/clion-2017.3.3/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/josh/CLionProjects/Practice/Test2/cmake-build-debug/CMakeFiles /home/josh/CLionProjects/Practice/Test2/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles /home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/josh/CLionProjects/Practice/Test2/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,59 +123,59 @@ Test2/fast:
 	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/build
 .PHONY : Test2/fast
 
-main.o: main.c.o
+src/main.o: src/main.c.o
 
-.PHONY : main.o
-
-# target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/main.c.o
-.PHONY : main.c.o
-
-main.i: main.c.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/main.c.i
-.PHONY : main.c.i
-
-main.s: main.c.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/main.c.s
-.PHONY : main.c.s
-
-sll.o: sll.c.o
-
-.PHONY : sll.o
+.PHONY : src/main.o
 
 # target to build an object file
-sll.c.o:
-	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/sll.c.o
-.PHONY : sll.c.o
+src/main.c.o:
+	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/main.c.o
+.PHONY : src/main.c.o
 
-sll.i: sll.c.i
+src/main.i: src/main.c.i
 
-.PHONY : sll.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-sll.c.i:
-	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/sll.c.i
-.PHONY : sll.c.i
+src/main.c.i:
+	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/main.c.i
+.PHONY : src/main.c.i
 
-sll.s: sll.c.s
+src/main.s: src/main.c.s
 
-.PHONY : sll.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-sll.c.s:
-	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/sll.c.s
-.PHONY : sll.c.s
+src/main.c.s:
+	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/main.c.s
+.PHONY : src/main.c.s
+
+src/sll.o: src/sll.c.o
+
+.PHONY : src/sll.o
+
+# target to build an object file
+src/sll.c.o:
+	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/sll.c.o
+.PHONY : src/sll.c.o
+
+src/sll.i: src/sll.c.i
+
+.PHONY : src/sll.i
+
+# target to preprocess a source file
+src/sll.c.i:
+	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/sll.c.i
+.PHONY : src/sll.c.i
+
+src/sll.s: src/sll.c.s
+
+.PHONY : src/sll.s
+
+# target to generate assembly for a file
+src/sll.c.s:
+	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/sll.c.s
+.PHONY : src/sll.c.s
 
 # Help Target
 help:
@@ -186,12 +186,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Test2"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... sll.o"
-	@echo "... sll.i"
-	@echo "... sll.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/sll.o"
+	@echo "... src/sll.i"
+	@echo "... src/sll.s"
 .PHONY : help
 
 
