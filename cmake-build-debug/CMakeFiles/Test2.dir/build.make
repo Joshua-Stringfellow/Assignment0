@@ -105,19 +105,97 @@ CMakeFiles/Test2.dir/src/sll.c.o.provides: CMakeFiles/Test2.dir/src/sll.c.o.requ
 CMakeFiles/Test2.dir/src/sll.c.o.provides.build: CMakeFiles/Test2.dir/src/sll.c.o
 
 
+CMakeFiles/Test2.dir/src/dll.c.o: CMakeFiles/Test2.dir/flags.make
+CMakeFiles/Test2.dir/src/dll.c.o: ../src/dll.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Test2.dir/src/dll.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Test2.dir/src/dll.c.o   -c /home/jrstringfellow/CS201/git/Assignment0/src/dll.c
+
+CMakeFiles/Test2.dir/src/dll.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Test2.dir/src/dll.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jrstringfellow/CS201/git/Assignment0/src/dll.c > CMakeFiles/Test2.dir/src/dll.c.i
+
+CMakeFiles/Test2.dir/src/dll.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Test2.dir/src/dll.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jrstringfellow/CS201/git/Assignment0/src/dll.c -o CMakeFiles/Test2.dir/src/dll.c.s
+
+CMakeFiles/Test2.dir/src/dll.c.o.requires:
+
+.PHONY : CMakeFiles/Test2.dir/src/dll.c.o.requires
+
+CMakeFiles/Test2.dir/src/dll.c.o.provides: CMakeFiles/Test2.dir/src/dll.c.o.requires
+	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/dll.c.o.provides.build
+.PHONY : CMakeFiles/Test2.dir/src/dll.c.o.provides
+
+CMakeFiles/Test2.dir/src/dll.c.o.provides.build: CMakeFiles/Test2.dir/src/dll.c.o
+
+
+CMakeFiles/Test2.dir/src/test-dll.c.o: CMakeFiles/Test2.dir/flags.make
+CMakeFiles/Test2.dir/src/test-dll.c.o: ../src/test-dll.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Test2.dir/src/test-dll.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Test2.dir/src/test-dll.c.o   -c /home/jrstringfellow/CS201/git/Assignment0/src/test-dll.c
+
+CMakeFiles/Test2.dir/src/test-dll.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Test2.dir/src/test-dll.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jrstringfellow/CS201/git/Assignment0/src/test-dll.c > CMakeFiles/Test2.dir/src/test-dll.c.i
+
+CMakeFiles/Test2.dir/src/test-dll.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Test2.dir/src/test-dll.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jrstringfellow/CS201/git/Assignment0/src/test-dll.c -o CMakeFiles/Test2.dir/src/test-dll.c.s
+
+CMakeFiles/Test2.dir/src/test-dll.c.o.requires:
+
+.PHONY : CMakeFiles/Test2.dir/src/test-dll.c.o.requires
+
+CMakeFiles/Test2.dir/src/test-dll.c.o.provides: CMakeFiles/Test2.dir/src/test-dll.c.o.requires
+	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/test-dll.c.o.provides.build
+.PHONY : CMakeFiles/Test2.dir/src/test-dll.c.o.provides
+
+CMakeFiles/Test2.dir/src/test-dll.c.o.provides.build: CMakeFiles/Test2.dir/src/test-dll.c.o
+
+
+CMakeFiles/Test2.dir/src/test-sll.c.o: CMakeFiles/Test2.dir/flags.make
+CMakeFiles/Test2.dir/src/test-sll.c.o: ../src/test-sll.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Test2.dir/src/test-sll.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Test2.dir/src/test-sll.c.o   -c /home/jrstringfellow/CS201/git/Assignment0/src/test-sll.c
+
+CMakeFiles/Test2.dir/src/test-sll.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Test2.dir/src/test-sll.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jrstringfellow/CS201/git/Assignment0/src/test-sll.c > CMakeFiles/Test2.dir/src/test-sll.c.i
+
+CMakeFiles/Test2.dir/src/test-sll.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Test2.dir/src/test-sll.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jrstringfellow/CS201/git/Assignment0/src/test-sll.c -o CMakeFiles/Test2.dir/src/test-sll.c.s
+
+CMakeFiles/Test2.dir/src/test-sll.c.o.requires:
+
+.PHONY : CMakeFiles/Test2.dir/src/test-sll.c.o.requires
+
+CMakeFiles/Test2.dir/src/test-sll.c.o.provides: CMakeFiles/Test2.dir/src/test-sll.c.o.requires
+	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/test-sll.c.o.provides.build
+.PHONY : CMakeFiles/Test2.dir/src/test-sll.c.o.provides
+
+CMakeFiles/Test2.dir/src/test-sll.c.o.provides.build: CMakeFiles/Test2.dir/src/test-sll.c.o
+
+
 # Object files for target Test2
 Test2_OBJECTS = \
 "CMakeFiles/Test2.dir/src/main.c.o" \
-"CMakeFiles/Test2.dir/src/sll.c.o"
+"CMakeFiles/Test2.dir/src/sll.c.o" \
+"CMakeFiles/Test2.dir/src/dll.c.o" \
+"CMakeFiles/Test2.dir/src/test-dll.c.o" \
+"CMakeFiles/Test2.dir/src/test-sll.c.o"
 
 # External object files for target Test2
 Test2_EXTERNAL_OBJECTS =
 
 Test2: CMakeFiles/Test2.dir/src/main.c.o
 Test2: CMakeFiles/Test2.dir/src/sll.c.o
+Test2: CMakeFiles/Test2.dir/src/dll.c.o
+Test2: CMakeFiles/Test2.dir/src/test-dll.c.o
+Test2: CMakeFiles/Test2.dir/src/test-sll.c.o
 Test2: CMakeFiles/Test2.dir/build.make
 Test2: CMakeFiles/Test2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable Test2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable Test2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Test2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -127,6 +205,9 @@ CMakeFiles/Test2.dir/build: Test2
 
 CMakeFiles/Test2.dir/requires: CMakeFiles/Test2.dir/src/main.c.o.requires
 CMakeFiles/Test2.dir/requires: CMakeFiles/Test2.dir/src/sll.c.o.requires
+CMakeFiles/Test2.dir/requires: CMakeFiles/Test2.dir/src/dll.c.o.requires
+CMakeFiles/Test2.dir/requires: CMakeFiles/Test2.dir/src/test-dll.c.o.requires
+CMakeFiles/Test2.dir/requires: CMakeFiles/Test2.dir/src/test-sll.c.o.requires
 
 .PHONY : CMakeFiles/Test2.dir/requires
 

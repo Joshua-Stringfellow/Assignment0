@@ -4,8 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/home/jrstringfellow/CS201/git/Assignment0/src/dll.c" "/home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles/Test2.dir/src/dll.c.o"
   "/home/jrstringfellow/CS201/git/Assignment0/src/main.c" "/home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles/Test2.dir/src/main.c.o"
   "/home/jrstringfellow/CS201/git/Assignment0/src/sll.c" "/home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles/Test2.dir/src/sll.c.o"
+  "/home/jrstringfellow/CS201/git/Assignment0/src/test-dll.c" "/home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles/Test2.dir/src/test-dll.c.o"
+  "/home/jrstringfellow/CS201/git/Assignment0/src/test-sll.c" "/home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles/Test2.dir/src/test-sll.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

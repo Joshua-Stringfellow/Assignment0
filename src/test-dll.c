@@ -16,7 +16,7 @@ static void showItems(DLL *items)
     printf(".\n");
 }
 
-int main()
+int test()
 {
     DLL *items = newDLL(displayINTEGER,freeINTEGER);
     showItems(items);
@@ -31,10 +31,9 @@ int main()
 
     printf("Update non index\n");
     setDLL(items,3,newINTEGER(5));
-    showItems(items);
 
     printf("The value ");
-    INTEGER *i = removeDLL(items,0);                   //remove from front
+    INTEGER *i = removeDLL(items,2);                   //remove from front
     displayINTEGER(i,stdout);
     printf(" was removed.\n");
     freeINTEGER(i);

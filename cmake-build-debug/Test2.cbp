@@ -78,6 +78,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/jrstringfellow/CS201/git/Assignment0/src/dll.c">
+			<Option target="Test2"/>
+		</Unit>
+		<Unit filename="/home/jrstringfellow/CS201/git/Assignment0/src/dll.h">
+			<Option target="Test2"/>
+		</Unit>
 		<Unit filename="/home/jrstringfellow/CS201/git/Assignment0/src/main.c">
 			<Option target="Test2"/>
 		</Unit>
@@ -85,6 +91,12 @@
 			<Option target="Test2"/>
 		</Unit>
 		<Unit filename="/home/jrstringfellow/CS201/git/Assignment0/src/sll.h">
+			<Option target="Test2"/>
+		</Unit>
+		<Unit filename="/home/jrstringfellow/CS201/git/Assignment0/src/test-dll.c">
+			<Option target="Test2"/>
+		</Unit>
+		<Unit filename="/home/jrstringfellow/CS201/git/Assignment0/src/test-sll.c">
 			<Option target="Test2"/>
 		</Unit>
 		<Unit filename="/home/jrstringfellow/CS201/git/Assignment0/CMakeLists.txt">

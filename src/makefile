@@ -1,4 +1,4 @@
-OBJS = main.o sll.o integer.o
+OBJS = main.o sll.o dll.o test-dll.o integer.o
 OPTS = -Wall -Wextra -g -std=c99 
  
 main : $(OBJS) 
@@ -9,6 +9,12 @@ main.o : main.c
 
 sll.o : sll.c sll.h 
 		gcc $(OPTS) -c sll.c
+
+dll.o : dll.c dll.h
+		gcc $(OPTS) -c dll.c
+
+test-dll.o : dll.c
+		gcc $(OPTS) -c test-dll.c
 
 integer.o : integer.c integer.h 
 		gcc $(OPTS) -c integer.c 

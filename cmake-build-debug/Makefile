@@ -123,6 +123,33 @@ Test2/fast:
 	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/build
 .PHONY : Test2/fast
 
+src/dll.o: src/dll.c.o
+
+.PHONY : src/dll.o
+
+# target to build an object file
+src/dll.c.o:
+	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/dll.c.o
+.PHONY : src/dll.c.o
+
+src/dll.i: src/dll.c.i
+
+.PHONY : src/dll.i
+
+# target to preprocess a source file
+src/dll.c.i:
+	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/dll.c.i
+.PHONY : src/dll.c.i
+
+src/dll.s: src/dll.c.s
+
+.PHONY : src/dll.s
+
+# target to generate assembly for a file
+src/dll.c.s:
+	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/dll.c.s
+.PHONY : src/dll.c.s
+
 src/main.o: src/main.c.o
 
 .PHONY : src/main.o
@@ -177,6 +204,60 @@ src/sll.c.s:
 	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/sll.c.s
 .PHONY : src/sll.c.s
 
+src/test-dll.o: src/test-dll.c.o
+
+.PHONY : src/test-dll.o
+
+# target to build an object file
+src/test-dll.c.o:
+	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/test-dll.c.o
+.PHONY : src/test-dll.c.o
+
+src/test-dll.i: src/test-dll.c.i
+
+.PHONY : src/test-dll.i
+
+# target to preprocess a source file
+src/test-dll.c.i:
+	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/test-dll.c.i
+.PHONY : src/test-dll.c.i
+
+src/test-dll.s: src/test-dll.c.s
+
+.PHONY : src/test-dll.s
+
+# target to generate assembly for a file
+src/test-dll.c.s:
+	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/test-dll.c.s
+.PHONY : src/test-dll.c.s
+
+src/test-sll.o: src/test-sll.c.o
+
+.PHONY : src/test-sll.o
+
+# target to build an object file
+src/test-sll.c.o:
+	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/test-sll.c.o
+.PHONY : src/test-sll.c.o
+
+src/test-sll.i: src/test-sll.c.i
+
+.PHONY : src/test-sll.i
+
+# target to preprocess a source file
+src/test-sll.c.i:
+	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/test-sll.c.i
+.PHONY : src/test-sll.c.i
+
+src/test-sll.s: src/test-sll.c.s
+
+.PHONY : src/test-sll.s
+
+# target to generate assembly for a file
+src/test-sll.c.s:
+	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/test-sll.c.s
+.PHONY : src/test-sll.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +267,21 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Test2"
+	@echo "... src/dll.o"
+	@echo "... src/dll.i"
+	@echo "... src/dll.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
 	@echo "... src/sll.o"
 	@echo "... src/sll.i"
 	@echo "... src/sll.s"
+	@echo "... src/test-dll.o"
+	@echo "... src/test-dll.i"
+	@echo "... src/test-dll.s"
+	@echo "... src/test-sll.o"
+	@echo "... src/test-sll.i"
+	@echo "... src/test-sll.s"
 .PHONY : help
 
 
