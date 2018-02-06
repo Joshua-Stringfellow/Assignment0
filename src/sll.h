@@ -6,8 +6,20 @@
 
 #include <stdio.h>
 
-typedef struct sll SLL;
-typedef struct node NODE;
+typedef struct node{
+    void *value;
+    struct node *next;
+} NODE;
+
+typedef struct sll {
+    NODE *head;
+    NODE *tail;
+    int size;
+    void (*display)(void *, FILE *);
+    void *free;
+
+} SLL;
+
 
 extern SLL *newSLL(void (*d)(void *,FILE *),void (*f)(void *));
 extern void insertSLL(SLL *items,int index,void *value);

@@ -6,13 +6,13 @@
 #include <assert.h>
 #include "dll.h"
 
-struct dll {
-    NODE *head;
-    NODE *tail;
-    int size;
-    void (*display)(void *, FILE *);
-    void *free;
-};
+//struct dll {
+//    NODE *head;
+//    NODE *tail;
+//    int size;
+//    void (*display)(void *, FILE *);
+//    void *free;
+//};
 
 DLL *newDLL(void (*d)(void *,FILE *),void (*f)(void *))
 {
@@ -25,12 +25,6 @@ DLL *newDLL(void (*d)(void *,FILE *),void (*f)(void *))
     items->free = f;
     return items;
 }
-
-struct node{
-    void *value;
-    NODE *next;
-    NODE *prev;
-};
 
 NODE *newDLLnode(void *value){
     NODE *m_node = malloc(sizeof(NODE));

@@ -7,20 +7,6 @@
 #include "sll.h"
 
 
-struct sll {
-    void *head;
-    void *tail;
-    int size;
-    void (*display)(void *, FILE *);
-    void *free;
-
-};
-
-struct node{
-    void *value;
-    void *next;
-};
-
 SLL *newSLL(void (*d)(void *,FILE *fp),void (*f)(void *items)) {
         SLL *items = malloc(sizeof(SLL));
         assert(items != 0);

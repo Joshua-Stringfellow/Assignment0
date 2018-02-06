@@ -87,10 +87,22 @@
 		<Unit filename="/home/jrstringfellow/CS201/git/Assignment0/src/main.c">
 			<Option target="Test2"/>
 		</Unit>
+		<Unit filename="/home/jrstringfellow/CS201/git/Assignment0/src/queue.c">
+			<Option target="Test2"/>
+		</Unit>
+		<Unit filename="/home/jrstringfellow/CS201/git/Assignment0/src/queue.h">
+			<Option target="Test2"/>
+		</Unit>
 		<Unit filename="/home/jrstringfellow/CS201/git/Assignment0/src/sll.c">
 			<Option target="Test2"/>
 		</Unit>
 		<Unit filename="/home/jrstringfellow/CS201/git/Assignment0/src/sll.h">
+			<Option target="Test2"/>
+		</Unit>
+		<Unit filename="/home/jrstringfellow/CS201/git/Assignment0/src/stack.c">
+			<Option target="Test2"/>
+		</Unit>
+		<Unit filename="/home/jrstringfellow/CS201/git/Assignment0/src/stack.h">
 			<Option target="Test2"/>
 		</Unit>
 		<Unit filename="/home/jrstringfellow/CS201/git/Assignment0/src/test-dll.c">

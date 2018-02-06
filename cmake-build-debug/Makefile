@@ -177,6 +177,33 @@ src/main.c.s:
 	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/main.c.s
 .PHONY : src/main.c.s
 
+src/queue.o: src/queue.c.o
+
+.PHONY : src/queue.o
+
+# target to build an object file
+src/queue.c.o:
+	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/queue.c.o
+.PHONY : src/queue.c.o
+
+src/queue.i: src/queue.c.i
+
+.PHONY : src/queue.i
+
+# target to preprocess a source file
+src/queue.c.i:
+	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/queue.c.i
+.PHONY : src/queue.c.i
+
+src/queue.s: src/queue.c.s
+
+.PHONY : src/queue.s
+
+# target to generate assembly for a file
+src/queue.c.s:
+	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/queue.c.s
+.PHONY : src/queue.c.s
+
 src/sll.o: src/sll.c.o
 
 .PHONY : src/sll.o
@@ -203,6 +230,33 @@ src/sll.s: src/sll.c.s
 src/sll.c.s:
 	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/sll.c.s
 .PHONY : src/sll.c.s
+
+src/stack.o: src/stack.c.o
+
+.PHONY : src/stack.o
+
+# target to build an object file
+src/stack.c.o:
+	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/stack.c.o
+.PHONY : src/stack.c.o
+
+src/stack.i: src/stack.c.i
+
+.PHONY : src/stack.i
+
+# target to preprocess a source file
+src/stack.c.i:
+	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/stack.c.i
+.PHONY : src/stack.c.i
+
+src/stack.s: src/stack.c.s
+
+.PHONY : src/stack.s
+
+# target to generate assembly for a file
+src/stack.c.s:
+	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/stack.c.s
+.PHONY : src/stack.c.s
 
 src/test-dll.o: src/test-dll.c.o
 
@@ -273,9 +327,15 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/queue.o"
+	@echo "... src/queue.i"
+	@echo "... src/queue.s"
 	@echo "... src/sll.o"
 	@echo "... src/sll.i"
 	@echo "... src/sll.s"
+	@echo "... src/stack.o"
+	@echo "... src/stack.i"
+	@echo "... src/stack.s"
 	@echo "... src/test-dll.o"
 	@echo "... src/test-dll.i"
 	@echo "... src/test-dll.s"

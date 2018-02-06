@@ -6,7 +6,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/home/jrstringfellow/CS201/git/Assignment0/src/dll.c" "/home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles/Test2.dir/src/dll.c.o"
   "/home/jrstringfellow/CS201/git/Assignment0/src/main.c" "/home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles/Test2.dir/src/main.c.o"
+  "/home/jrstringfellow/CS201/git/Assignment0/src/queue.c" "/home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles/Test2.dir/src/queue.c.o"
   "/home/jrstringfellow/CS201/git/Assignment0/src/sll.c" "/home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles/Test2.dir/src/sll.c.o"
+  "/home/jrstringfellow/CS201/git/Assignment0/src/stack.c" "/home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles/Test2.dir/src/stack.c.o"
   "/home/jrstringfellow/CS201/git/Assignment0/src/test-dll.c" "/home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles/Test2.dir/src/test-dll.c.o"
   "/home/jrstringfellow/CS201/git/Assignment0/src/test-sll.c" "/home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles/Test2.dir/src/test-sll.c.o"
   )

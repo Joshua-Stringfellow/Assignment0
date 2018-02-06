@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Test2.dir/src/dll.c.o"
   "CMakeFiles/Test2.dir/src/test-dll.c.o"
   "CMakeFiles/Test2.dir/src/test-sll.c.o"
+  "CMakeFiles/Test2.dir/src/stack.c.o"
+  "CMakeFiles/Test2.dir/src/queue.c.o"
   "Test2.pdb"
   "Test2"
 )

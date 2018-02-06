@@ -3,8 +3,19 @@
 
 #include <stdio.h>
 
-typedef struct dll DLL;
-typedef struct node NODE;
+typedef struct node{
+    void *value;
+    struct node *next;
+    struct node *prev;
+} NODE;
+typedef struct dll {
+    NODE *head;
+    NODE *tail;
+    int size;
+    void (*display)(void *, FILE *);
+    void *free;
+} DLL;
+
 
 extern DLL *newDLL(void (*d)(void *,FILE *),void (*f)(void *));
 extern void insertDLL(DLL *items,int index,void *value);
