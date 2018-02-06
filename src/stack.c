@@ -23,10 +23,32 @@ void *pop(STACK *items){
     return value;
 }
 void *peekSTACK(STACK *items){
-    DLL *list = items->list;
-    return list->head->value;
+    return getDLL(items->list,0);
 }
 int sizeSTACK(STACK *items){ return sizeDLL(items->list);}
-void displaySTACK(STACK *items,FILE *fp){displayDLL(items->list,fp);}
+
+void displaySTACK(STACK *items,FILE *fp){ if(items->list->head == 0)
+    {
+        fprintf(fp,"||");
+        return;
+    }
+    NODE *curr = items->list->head;
+    fprintf(fp,"|");
+    for(int i = 0; i < sizeDLL(items->list); i++)
+    {
+        if(i == items->list->size - 1 )
+        {
+            items->list->display( curr->value, fp);
+        }
+        else
+        {
+            items->list->display(curr->value, fp);
+            fprintf(fp,",");
+        }
+        curr = curr->next;
+    }
+    fprintf(fp,"|");}
+
 void displaySTACKdebug(STACK *items,FILE *fp){displayDLLdebug(items->list,fp);}
-void freeSTACK(STACK *items){freeDLL(items->list);}
+void freeSTACK(STACK *items){freeDLL(items->list);
+free(items);}

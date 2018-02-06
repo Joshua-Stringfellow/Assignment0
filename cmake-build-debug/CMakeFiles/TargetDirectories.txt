@@ -1,3 +1,6 @@
 /home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles/Test2.dir
+/home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles/test-queue.dir
+/home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles/test-stack.dir
+/home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles/test-dll.dir
+/home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles/test-sll.dir

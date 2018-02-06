@@ -225,6 +225,78 @@ CMakeFiles/Test2.dir/src/queue.c.o.provides: CMakeFiles/Test2.dir/src/queue.c.o.
 CMakeFiles/Test2.dir/src/queue.c.o.provides.build: CMakeFiles/Test2.dir/src/queue.c.o
 
 
+CMakeFiles/Test2.dir/src/test-stack.c.o: CMakeFiles/Test2.dir/flags.make
+CMakeFiles/Test2.dir/src/test-stack.c.o: ../src/test-stack.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/Test2.dir/src/test-stack.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Test2.dir/src/test-stack.c.o   -c /home/jrstringfellow/CS201/git/Assignment0/src/test-stack.c
+
+CMakeFiles/Test2.dir/src/test-stack.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Test2.dir/src/test-stack.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jrstringfellow/CS201/git/Assignment0/src/test-stack.c > CMakeFiles/Test2.dir/src/test-stack.c.i
+
+CMakeFiles/Test2.dir/src/test-stack.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Test2.dir/src/test-stack.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jrstringfellow/CS201/git/Assignment0/src/test-stack.c -o CMakeFiles/Test2.dir/src/test-stack.c.s
+
+CMakeFiles/Test2.dir/src/test-stack.c.o.requires:
+
+.PHONY : CMakeFiles/Test2.dir/src/test-stack.c.o.requires
+
+CMakeFiles/Test2.dir/src/test-stack.c.o.provides: CMakeFiles/Test2.dir/src/test-stack.c.o.requires
+	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/test-stack.c.o.provides.build
+.PHONY : CMakeFiles/Test2.dir/src/test-stack.c.o.provides
+
+CMakeFiles/Test2.dir/src/test-stack.c.o.provides.build: CMakeFiles/Test2.dir/src/test-stack.c.o
+
+
+CMakeFiles/Test2.dir/src/test-queue.c.o: CMakeFiles/Test2.dir/flags.make
+CMakeFiles/Test2.dir/src/test-queue.c.o: ../src/test-queue.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/Test2.dir/src/test-queue.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Test2.dir/src/test-queue.c.o   -c /home/jrstringfellow/CS201/git/Assignment0/src/test-queue.c
+
+CMakeFiles/Test2.dir/src/test-queue.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Test2.dir/src/test-queue.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jrstringfellow/CS201/git/Assignment0/src/test-queue.c > CMakeFiles/Test2.dir/src/test-queue.c.i
+
+CMakeFiles/Test2.dir/src/test-queue.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Test2.dir/src/test-queue.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jrstringfellow/CS201/git/Assignment0/src/test-queue.c -o CMakeFiles/Test2.dir/src/test-queue.c.s
+
+CMakeFiles/Test2.dir/src/test-queue.c.o.requires:
+
+.PHONY : CMakeFiles/Test2.dir/src/test-queue.c.o.requires
+
+CMakeFiles/Test2.dir/src/test-queue.c.o.provides: CMakeFiles/Test2.dir/src/test-queue.c.o.requires
+	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/test-queue.c.o.provides.build
+.PHONY : CMakeFiles/Test2.dir/src/test-queue.c.o.provides
+
+CMakeFiles/Test2.dir/src/test-queue.c.o.provides.build: CMakeFiles/Test2.dir/src/test-queue.c.o
+
+
+CMakeFiles/Test2.dir/src/integer.c.o: CMakeFiles/Test2.dir/flags.make
+CMakeFiles/Test2.dir/src/integer.c.o: ../src/integer.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/Test2.dir/src/integer.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Test2.dir/src/integer.c.o   -c /home/jrstringfellow/CS201/git/Assignment0/src/integer.c
+
+CMakeFiles/Test2.dir/src/integer.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Test2.dir/src/integer.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jrstringfellow/CS201/git/Assignment0/src/integer.c > CMakeFiles/Test2.dir/src/integer.c.i
+
+CMakeFiles/Test2.dir/src/integer.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Test2.dir/src/integer.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jrstringfellow/CS201/git/Assignment0/src/integer.c -o CMakeFiles/Test2.dir/src/integer.c.s
+
+CMakeFiles/Test2.dir/src/integer.c.o.requires:
+
+.PHONY : CMakeFiles/Test2.dir/src/integer.c.o.requires
+
+CMakeFiles/Test2.dir/src/integer.c.o.provides: CMakeFiles/Test2.dir/src/integer.c.o.requires
+	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/integer.c.o.provides.build
+.PHONY : CMakeFiles/Test2.dir/src/integer.c.o.provides
+
+CMakeFiles/Test2.dir/src/integer.c.o.provides.build: CMakeFiles/Test2.dir/src/integer.c.o
+
+
 # Object files for target Test2
 Test2_OBJECTS = \
 "CMakeFiles/Test2.dir/src/main.c.o" \
@@ -233,7 +305,10 @@ Test2_OBJECTS = \
 "CMakeFiles/Test2.dir/src/test-dll.c.o" \
 "CMakeFiles/Test2.dir/src/test-sll.c.o" \
 "CMakeFiles/Test2.dir/src/stack.c.o" \
-"CMakeFiles/Test2.dir/src/queue.c.o"
+"CMakeFiles/Test2.dir/src/queue.c.o" \
+"CMakeFiles/Test2.dir/src/test-stack.c.o" \
+"CMakeFiles/Test2.dir/src/test-queue.c.o" \
+"CMakeFiles/Test2.dir/src/integer.c.o"
 
 # External object files for target Test2
 Test2_EXTERNAL_OBJECTS =
@@ -245,9 +320,12 @@ Test2: CMakeFiles/Test2.dir/src/test-dll.c.o
 Test2: CMakeFiles/Test2.dir/src/test-sll.c.o
 Test2: CMakeFiles/Test2.dir/src/stack.c.o
 Test2: CMakeFiles/Test2.dir/src/queue.c.o
+Test2: CMakeFiles/Test2.dir/src/test-stack.c.o
+Test2: CMakeFiles/Test2.dir/src/test-queue.c.o
+Test2: CMakeFiles/Test2.dir/src/integer.c.o
 Test2: CMakeFiles/Test2.dir/build.make
 Test2: CMakeFiles/Test2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C executable Test2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking C executable Test2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Test2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -262,6 +340,9 @@ CMakeFiles/Test2.dir/requires: CMakeFiles/Test2.dir/src/test-dll.c.o.requires
 CMakeFiles/Test2.dir/requires: CMakeFiles/Test2.dir/src/test-sll.c.o.requires
 CMakeFiles/Test2.dir/requires: CMakeFiles/Test2.dir/src/stack.c.o.requires
 CMakeFiles/Test2.dir/requires: CMakeFiles/Test2.dir/src/queue.c.o.requires
+CMakeFiles/Test2.dir/requires: CMakeFiles/Test2.dir/src/test-stack.c.o.requires
+CMakeFiles/Test2.dir/requires: CMakeFiles/Test2.dir/src/test-queue.c.o.requires
+CMakeFiles/Test2.dir/requires: CMakeFiles/Test2.dir/src/integer.c.o.requires
 
 .PHONY : CMakeFiles/Test2.dir/requires
 

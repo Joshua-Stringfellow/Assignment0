@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
-#include "integer.h"
+#include "integer1.h"
 
 int
 main(int argc,char **argv)

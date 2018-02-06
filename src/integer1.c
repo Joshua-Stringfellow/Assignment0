@@ -5,47 +5,47 @@
 #include "integer1.h"
 
 struct INTEGER
-{
+    {
     int value;
-};
+    };
 
 INTEGER *
 newINTEGER(int x)
-{
+    {
     INTEGER *p = malloc(sizeof(INTEGER));
     assert(p != 0);
     p->value = x;
     return p;
-}
+    }
 
-int
+int 
 getINTEGER(INTEGER *v)
-{
+    {
     return v->value;
-}
+    }
 
-int
+int 
 setINTEGER(INTEGER *v,int x)
-{
+    {
     int old = v->value;
     v->value = x;
     return old;
-}
+    }
 
-void
+void 
 displayINTEGER(void *v,FILE *fp)
-{
+    {
     fprintf(fp,"%d",getINTEGER((INTEGER *) v));
-}
+    }
 
-int
+int 
 compareINTEGER(void *v,void *w)
-{
+    {
     return getINTEGER(v) - getINTEGER(w);
-}
+    }
 
 void
 freeINTEGER(void *v)
-{
+    {
     free((INTEGER *) v);
-}
+    }

@@ -6,6 +6,7 @@
 #define __STACK_INCLUDED__
 
 #include <stdio.h>
+#include "dll.h"
 
 typedef struct stack STACK;
 

@@ -82,12 +82,14 @@ void *removeSLL(SLL *items,int index){
         {
             curr = curr->next;
             items->head = curr;
+            //free(curr);
         }
         else
         {
             items->head = 0;
             items-> tail = 0;
             items->size = 0;
+            free(curr);
             return returnValue;
         }
 
@@ -103,14 +105,16 @@ void *removeSLL(SLL *items,int index){
         if(index == sizeSLL(items) - 1)
         {
             items->tail = curr;
-            curr->next = 0;
+            free(curr->next);
         }
         else
         {
             NODE *removedNode = curr->next;
             curr->next = removedNode->next;
+            //free(curr->value);
+            //free(curr);
+            curr->next= curr->next->next;
         }
-
     }
 
     items->size--;
@@ -118,9 +122,25 @@ void *removeSLL(SLL *items,int index){
 }
 
 void unionSLL(SLL *recipient,SLL *donor){
-    NODE *curr = recipient->tail;
-    curr->next = donor->head;
-    recipient->tail = donor->tail;
+
+    if(recipient->head ==0 && recipient->tail ==0)
+    {
+        if(donor->head != 0 && donor->tail != 0)
+        {
+            recipient->head= donor->head;
+            recipient->tail = donor->tail;
+            recipient->size+= donor->size;
+            donor->tail =0; donor->head = 0;
+        }
+    }
+    else if(donor->head != 0 && donor->tail != 0){
+//		puts("in donor->head != 0 && donor->tail != 0 statment");
+        recipient->tail->next = donor->head;
+        recipient->tail = donor->tail;
+        recipient->size+= donor->size;
+        donor->tail =0; donor->head = 0;
+    }
+    donor->size = 0;
 }
 
 void *getSLL(SLL *items,int index){
@@ -159,11 +179,11 @@ void displaySLL(SLL *items,FILE *fp){
     //printf("Beginning Display\n");
     if(items->head == 0)
     {
-        fprintf(fp,"[]");
+        fprintf(fp,"{}");
         return;
     }
     NODE *curr = items->head;
-    fprintf(fp,"[");
+    fprintf(fp,"{");
     for(int i = 0; i < items->size; i++)
     {
         if(i == items->size - 1 )
@@ -177,13 +197,13 @@ void displaySLL(SLL *items,FILE *fp){
         }
         curr = curr->next;
     }
-    fprintf(fp,"]");
+    fprintf(fp,"}");
 }
 
 
 void displaySLLdebug(SLL *items,FILE *fp){
     if (items->size == 0) {
-        fprintf(fp, "head->{}, tail->{}");
+        fprintf(fp, "head->{},tail->{}");
     }
     else {
         NODE *curr = items->head;
@@ -194,20 +214,24 @@ void displaySLLdebug(SLL *items,FILE *fp){
                     fprintf(fp, ",");
             curr = curr->next;
     }
-        fprintf(fp,"}, tail->{");
-        curr = items->tail;
-        items->display(curr->value, fp);
+        fprintf(fp,"},tail->{");
+        //printf("Tail Value = %d", *(int*)items->tail->value);
+
+        items->display(items->tail->value, fp);
         fprintf(fp, "}");
     }
 
 }
 void freeSLL(SLL *items){
-    NODE * curr = items->head;
+    NODE * curr;
 
-    for (int i=0; i<sizeSLL(items); i++)
+    while (items->head != 0)
     {
-        items->head = curr->next;
-        free(curr);
         curr = items->head;
+        items->head = items->head->next;
+        free(curr->value);
+        free(curr);
     }
-}
+    items->tail=NULL;
+    free(items);
+   }

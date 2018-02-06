@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "dll.h"
-#include "integer.h"
+#include "integer1.h"
 
 static void showItems(DLL *items)
 {

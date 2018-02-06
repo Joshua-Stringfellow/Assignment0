@@ -111,17 +111,56 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Test2
+# Target rules for targets named test-queue
 
 # Build rule for target.
-Test2: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Test2
-.PHONY : Test2
+test-queue: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test-queue
+.PHONY : test-queue
 
 # fast build rule for target.
-Test2/fast:
-	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/build
-.PHONY : Test2/fast
+test-queue/fast:
+	$(MAKE) -f CMakeFiles/test-queue.dir/build.make CMakeFiles/test-queue.dir/build
+.PHONY : test-queue/fast
+
+#=============================================================================
+# Target rules for targets named test-stack
+
+# Build rule for target.
+test-stack: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test-stack
+.PHONY : test-stack
+
+# fast build rule for target.
+test-stack/fast:
+	$(MAKE) -f CMakeFiles/test-stack.dir/build.make CMakeFiles/test-stack.dir/build
+.PHONY : test-stack/fast
+
+#=============================================================================
+# Target rules for targets named test-dll
+
+# Build rule for target.
+test-dll: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test-dll
+.PHONY : test-dll
+
+# fast build rule for target.
+test-dll/fast:
+	$(MAKE) -f CMakeFiles/test-dll.dir/build.make CMakeFiles/test-dll.dir/build
+.PHONY : test-dll/fast
+
+#=============================================================================
+# Target rules for targets named test-sll
+
+# Build rule for target.
+test-sll: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test-sll
+.PHONY : test-sll
+
+# fast build rule for target.
+test-sll/fast:
+	$(MAKE) -f CMakeFiles/test-sll.dir/build.make CMakeFiles/test-sll.dir/build
+.PHONY : test-sll/fast
 
 src/dll.o: src/dll.c.o
 
@@ -129,7 +168,8 @@ src/dll.o: src/dll.c.o
 
 # target to build an object file
 src/dll.c.o:
-	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/dll.c.o
+	$(MAKE) -f CMakeFiles/test-stack.dir/build.make CMakeFiles/test-stack.dir/src/dll.c.o
+	$(MAKE) -f CMakeFiles/test-dll.dir/build.make CMakeFiles/test-dll.dir/src/dll.c.o
 .PHONY : src/dll.c.o
 
 src/dll.i: src/dll.c.i
@@ -138,7 +178,8 @@ src/dll.i: src/dll.c.i
 
 # target to preprocess a source file
 src/dll.c.i:
-	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/dll.c.i
+	$(MAKE) -f CMakeFiles/test-stack.dir/build.make CMakeFiles/test-stack.dir/src/dll.c.i
+	$(MAKE) -f CMakeFiles/test-dll.dir/build.make CMakeFiles/test-dll.dir/src/dll.c.i
 .PHONY : src/dll.c.i
 
 src/dll.s: src/dll.c.s
@@ -147,35 +188,45 @@ src/dll.s: src/dll.c.s
 
 # target to generate assembly for a file
 src/dll.c.s:
-	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/dll.c.s
+	$(MAKE) -f CMakeFiles/test-stack.dir/build.make CMakeFiles/test-stack.dir/src/dll.c.s
+	$(MAKE) -f CMakeFiles/test-dll.dir/build.make CMakeFiles/test-dll.dir/src/dll.c.s
 .PHONY : src/dll.c.s
 
-src/main.o: src/main.c.o
+src/integer.o: src/integer.c.o
 
-.PHONY : src/main.o
+.PHONY : src/integer.o
 
 # target to build an object file
-src/main.c.o:
-	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/main.c.o
-.PHONY : src/main.c.o
+src/integer.c.o:
+	$(MAKE) -f CMakeFiles/test-queue.dir/build.make CMakeFiles/test-queue.dir/src/integer.c.o
+	$(MAKE) -f CMakeFiles/test-stack.dir/build.make CMakeFiles/test-stack.dir/src/integer.c.o
+	$(MAKE) -f CMakeFiles/test-dll.dir/build.make CMakeFiles/test-dll.dir/src/integer.c.o
+	$(MAKE) -f CMakeFiles/test-sll.dir/build.make CMakeFiles/test-sll.dir/src/integer.c.o
+.PHONY : src/integer.c.o
 
-src/main.i: src/main.c.i
+src/integer.i: src/integer.c.i
 
-.PHONY : src/main.i
+.PHONY : src/integer.i
 
 # target to preprocess a source file
-src/main.c.i:
-	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/main.c.i
-.PHONY : src/main.c.i
+src/integer.c.i:
+	$(MAKE) -f CMakeFiles/test-queue.dir/build.make CMakeFiles/test-queue.dir/src/integer.c.i
+	$(MAKE) -f CMakeFiles/test-stack.dir/build.make CMakeFiles/test-stack.dir/src/integer.c.i
+	$(MAKE) -f CMakeFiles/test-dll.dir/build.make CMakeFiles/test-dll.dir/src/integer.c.i
+	$(MAKE) -f CMakeFiles/test-sll.dir/build.make CMakeFiles/test-sll.dir/src/integer.c.i
+.PHONY : src/integer.c.i
 
-src/main.s: src/main.c.s
+src/integer.s: src/integer.c.s
 
-.PHONY : src/main.s
+.PHONY : src/integer.s
 
 # target to generate assembly for a file
-src/main.c.s:
-	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/main.c.s
-.PHONY : src/main.c.s
+src/integer.c.s:
+	$(MAKE) -f CMakeFiles/test-queue.dir/build.make CMakeFiles/test-queue.dir/src/integer.c.s
+	$(MAKE) -f CMakeFiles/test-stack.dir/build.make CMakeFiles/test-stack.dir/src/integer.c.s
+	$(MAKE) -f CMakeFiles/test-dll.dir/build.make CMakeFiles/test-dll.dir/src/integer.c.s
+	$(MAKE) -f CMakeFiles/test-sll.dir/build.make CMakeFiles/test-sll.dir/src/integer.c.s
+.PHONY : src/integer.c.s
 
 src/queue.o: src/queue.c.o
 
@@ -183,7 +234,7 @@ src/queue.o: src/queue.c.o
 
 # target to build an object file
 src/queue.c.o:
-	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/queue.c.o
+	$(MAKE) -f CMakeFiles/test-queue.dir/build.make CMakeFiles/test-queue.dir/src/queue.c.o
 .PHONY : src/queue.c.o
 
 src/queue.i: src/queue.c.i
@@ -192,7 +243,7 @@ src/queue.i: src/queue.c.i
 
 # target to preprocess a source file
 src/queue.c.i:
-	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/queue.c.i
+	$(MAKE) -f CMakeFiles/test-queue.dir/build.make CMakeFiles/test-queue.dir/src/queue.c.i
 .PHONY : src/queue.c.i
 
 src/queue.s: src/queue.c.s
@@ -201,7 +252,7 @@ src/queue.s: src/queue.c.s
 
 # target to generate assembly for a file
 src/queue.c.s:
-	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/queue.c.s
+	$(MAKE) -f CMakeFiles/test-queue.dir/build.make CMakeFiles/test-queue.dir/src/queue.c.s
 .PHONY : src/queue.c.s
 
 src/sll.o: src/sll.c.o
@@ -210,7 +261,8 @@ src/sll.o: src/sll.c.o
 
 # target to build an object file
 src/sll.c.o:
-	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/sll.c.o
+	$(MAKE) -f CMakeFiles/test-queue.dir/build.make CMakeFiles/test-queue.dir/src/sll.c.o
+	$(MAKE) -f CMakeFiles/test-sll.dir/build.make CMakeFiles/test-sll.dir/src/sll.c.o
 .PHONY : src/sll.c.o
 
 src/sll.i: src/sll.c.i
@@ -219,7 +271,8 @@ src/sll.i: src/sll.c.i
 
 # target to preprocess a source file
 src/sll.c.i:
-	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/sll.c.i
+	$(MAKE) -f CMakeFiles/test-queue.dir/build.make CMakeFiles/test-queue.dir/src/sll.c.i
+	$(MAKE) -f CMakeFiles/test-sll.dir/build.make CMakeFiles/test-sll.dir/src/sll.c.i
 .PHONY : src/sll.c.i
 
 src/sll.s: src/sll.c.s
@@ -228,7 +281,8 @@ src/sll.s: src/sll.c.s
 
 # target to generate assembly for a file
 src/sll.c.s:
-	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/sll.c.s
+	$(MAKE) -f CMakeFiles/test-queue.dir/build.make CMakeFiles/test-queue.dir/src/sll.c.s
+	$(MAKE) -f CMakeFiles/test-sll.dir/build.make CMakeFiles/test-sll.dir/src/sll.c.s
 .PHONY : src/sll.c.s
 
 src/stack.o: src/stack.c.o
@@ -237,7 +291,7 @@ src/stack.o: src/stack.c.o
 
 # target to build an object file
 src/stack.c.o:
-	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/stack.c.o
+	$(MAKE) -f CMakeFiles/test-stack.dir/build.make CMakeFiles/test-stack.dir/src/stack.c.o
 .PHONY : src/stack.c.o
 
 src/stack.i: src/stack.c.i
@@ -246,7 +300,7 @@ src/stack.i: src/stack.c.i
 
 # target to preprocess a source file
 src/stack.c.i:
-	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/stack.c.i
+	$(MAKE) -f CMakeFiles/test-stack.dir/build.make CMakeFiles/test-stack.dir/src/stack.c.i
 .PHONY : src/stack.c.i
 
 src/stack.s: src/stack.c.s
@@ -255,7 +309,7 @@ src/stack.s: src/stack.c.s
 
 # target to generate assembly for a file
 src/stack.c.s:
-	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/stack.c.s
+	$(MAKE) -f CMakeFiles/test-stack.dir/build.make CMakeFiles/test-stack.dir/src/stack.c.s
 .PHONY : src/stack.c.s
 
 src/test-dll.o: src/test-dll.c.o
@@ -264,7 +318,7 @@ src/test-dll.o: src/test-dll.c.o
 
 # target to build an object file
 src/test-dll.c.o:
-	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/test-dll.c.o
+	$(MAKE) -f CMakeFiles/test-dll.dir/build.make CMakeFiles/test-dll.dir/src/test-dll.c.o
 .PHONY : src/test-dll.c.o
 
 src/test-dll.i: src/test-dll.c.i
@@ -273,7 +327,7 @@ src/test-dll.i: src/test-dll.c.i
 
 # target to preprocess a source file
 src/test-dll.c.i:
-	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/test-dll.c.i
+	$(MAKE) -f CMakeFiles/test-dll.dir/build.make CMakeFiles/test-dll.dir/src/test-dll.c.i
 .PHONY : src/test-dll.c.i
 
 src/test-dll.s: src/test-dll.c.s
@@ -282,8 +336,35 @@ src/test-dll.s: src/test-dll.c.s
 
 # target to generate assembly for a file
 src/test-dll.c.s:
-	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/test-dll.c.s
+	$(MAKE) -f CMakeFiles/test-dll.dir/build.make CMakeFiles/test-dll.dir/src/test-dll.c.s
 .PHONY : src/test-dll.c.s
+
+src/test-queue.o: src/test-queue.c.o
+
+.PHONY : src/test-queue.o
+
+# target to build an object file
+src/test-queue.c.o:
+	$(MAKE) -f CMakeFiles/test-queue.dir/build.make CMakeFiles/test-queue.dir/src/test-queue.c.o
+.PHONY : src/test-queue.c.o
+
+src/test-queue.i: src/test-queue.c.i
+
+.PHONY : src/test-queue.i
+
+# target to preprocess a source file
+src/test-queue.c.i:
+	$(MAKE) -f CMakeFiles/test-queue.dir/build.make CMakeFiles/test-queue.dir/src/test-queue.c.i
+.PHONY : src/test-queue.c.i
+
+src/test-queue.s: src/test-queue.c.s
+
+.PHONY : src/test-queue.s
+
+# target to generate assembly for a file
+src/test-queue.c.s:
+	$(MAKE) -f CMakeFiles/test-queue.dir/build.make CMakeFiles/test-queue.dir/src/test-queue.c.s
+.PHONY : src/test-queue.c.s
 
 src/test-sll.o: src/test-sll.c.o
 
@@ -291,7 +372,7 @@ src/test-sll.o: src/test-sll.c.o
 
 # target to build an object file
 src/test-sll.c.o:
-	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/test-sll.c.o
+	$(MAKE) -f CMakeFiles/test-sll.dir/build.make CMakeFiles/test-sll.dir/src/test-sll.c.o
 .PHONY : src/test-sll.c.o
 
 src/test-sll.i: src/test-sll.c.i
@@ -300,7 +381,7 @@ src/test-sll.i: src/test-sll.c.i
 
 # target to preprocess a source file
 src/test-sll.c.i:
-	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/test-sll.c.i
+	$(MAKE) -f CMakeFiles/test-sll.dir/build.make CMakeFiles/test-sll.dir/src/test-sll.c.i
 .PHONY : src/test-sll.c.i
 
 src/test-sll.s: src/test-sll.c.s
@@ -309,8 +390,35 @@ src/test-sll.s: src/test-sll.c.s
 
 # target to generate assembly for a file
 src/test-sll.c.s:
-	$(MAKE) -f CMakeFiles/Test2.dir/build.make CMakeFiles/Test2.dir/src/test-sll.c.s
+	$(MAKE) -f CMakeFiles/test-sll.dir/build.make CMakeFiles/test-sll.dir/src/test-sll.c.s
 .PHONY : src/test-sll.c.s
+
+src/test-stack.o: src/test-stack.c.o
+
+.PHONY : src/test-stack.o
+
+# target to build an object file
+src/test-stack.c.o:
+	$(MAKE) -f CMakeFiles/test-stack.dir/build.make CMakeFiles/test-stack.dir/src/test-stack.c.o
+.PHONY : src/test-stack.c.o
+
+src/test-stack.i: src/test-stack.c.i
+
+.PHONY : src/test-stack.i
+
+# target to preprocess a source file
+src/test-stack.c.i:
+	$(MAKE) -f CMakeFiles/test-stack.dir/build.make CMakeFiles/test-stack.dir/src/test-stack.c.i
+.PHONY : src/test-stack.c.i
+
+src/test-stack.s: src/test-stack.c.s
+
+.PHONY : src/test-stack.s
+
+# target to generate assembly for a file
+src/test-stack.c.s:
+	$(MAKE) -f CMakeFiles/test-stack.dir/build.make CMakeFiles/test-stack.dir/src/test-stack.c.s
+.PHONY : src/test-stack.c.s
 
 # Help Target
 help:
@@ -320,13 +428,16 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... Test2"
+	@echo "... test-queue"
+	@echo "... test-stack"
+	@echo "... test-dll"
+	@echo "... test-sll"
 	@echo "... src/dll.o"
 	@echo "... src/dll.i"
 	@echo "... src/dll.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... src/integer.o"
+	@echo "... src/integer.i"
+	@echo "... src/integer.s"
 	@echo "... src/queue.o"
 	@echo "... src/queue.i"
 	@echo "... src/queue.s"
@@ -339,9 +450,15 @@ help:
 	@echo "... src/test-dll.o"
 	@echo "... src/test-dll.i"
 	@echo "... src/test-dll.s"
+	@echo "... src/test-queue.o"
+	@echo "... src/test-queue.i"
+	@echo "... src/test-queue.s"
 	@echo "... src/test-sll.o"
 	@echo "... src/test-sll.i"
 	@echo "... src/test-sll.s"
+	@echo "... src/test-stack.o"
+	@echo "... src/test-stack.i"
+	@echo "... src/test-stack.s"
 .PHONY : help
 
 

@@ -3,8 +3,9 @@
 //
 #include <stdlib.h>
 #include "queue.h"
+#include "sll.h"
 
-QUEUE *newQueue(void (*d)(FILE *,void *),void (*f)(void *))   //constructor
+QUEUE *newQUEUE(void (*d)(void *,FILE *),void (*f)(void *))   //constructor
 {
     QUEUE *items = malloc(sizeof(QUEUE));
     items->list = newSLL(d,f);
@@ -19,15 +20,43 @@ void *dequeue(QUEUE *items)                 //returns a generic value
     void * a =removeSLL(items->list,0);
     return a;
 }
-void *peekQueue(QUEUE *items)               //returns a generic value
+void *peekQUEUE(QUEUE *items)               //returns a generic value
 {
-    return items->list->tail->value;
+    return getSLL(items->list,0);
 }
-int sizeQueue(QUEUE *items)
+int sizeQUEUE(QUEUE *items)
 {
-    return items->list->size;
+    return sizeSLL(items->list);
 }
-void displayQueue(FILE *fp,QUEUE *items)
+void displayQUEUE(QUEUE *items,FILE *fp)
 {
     displaySLL(items->list,fp);
+//    if(items->list->head == 0)
+//    {
+//        fprintf(fp,"<>");
+//        return;
+//    }
+//    NODE *curr = items->list->head;
+//    fprintf(fp,"<");
+//    for(int i = 0; i < sizeSLL(items->list); i++)
+//    {
+//        if(i == items->list->size - 1 )
+//        {
+//            items->list->display( curr->value, fp);
+//        }
+//        else
+//        {
+//            items->list->display(curr->value, fp);
+//            fprintf(fp,",");
+//        }
+//        curr = curr->next;
+//    }
+//    fprintf(fp,">");
+}
+
+void displayQUEUEdebug(QUEUE *items, FILE *fp){displaySLLdebug(items->list,fp);}
+
+void freeQUEUE(QUEUE *items){
+    freeSLL(items->list);
+    free(items);
 }

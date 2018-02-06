@@ -1,61 +1,44 @@
-//
-// Created by jrstringfellow on 2/5/18.
-//
 #include <stdio.h>
 #include <stdlib.h>
 #include "dll.h"
-#include "integer.h"
+#include "integer1.h"
 
-static void showItems(DLL *items)
+extern void srandom(unsigned int);
+extern long int random(void);
+
+int
+main(void)
 {
-    printf("The items are ");
-    displayDLL(items,stdout);
-    printf(".\n");
-    printf("The items (debugged) are ");
-    displayDLLdebug(items,stdout);
-    printf(".\n");
-}
-
-int test()
-{
-    DLL *items = newDLL(displayINTEGER,freeINTEGER);
-    showItems(items);
-    insertDLL(items,0,newINTEGER(3));                   //insert at front
-    insertDLL(items,sizeDLL(items),newINTEGER(2));      //insert at back
-    insertDLL(items,1,newINTEGER(1));                   //insert at middle
-    showItems(items);
-
-    printf("Update index 1\n");
-    setDLL(items,1,newINTEGER(4));
-    showItems(items);
-
-    printf("Update non index\n");
-    setDLL(items,3,newINTEGER(5));
-
-    printf("The value ");
-    INTEGER *i = removeDLL(items,2);                   //remove from front
-    displayINTEGER(i,stdout);
-    printf(" was removed.\n");
-    freeINTEGER(i);
-    showItems(items);
-    int x = getINTEGER((INTEGER *) getDLL(items,0));    //get the first item
-    printf("The first item is %d.\n",x);
-    printf("Freeing the list.\n\n");
-    freeDLL(items);
-
-    printf("Building union DLLs\n");
-    DLL *newitems = newDLL(displayINTEGER,freeINTEGER);
-    showItems(newitems);
-    insertDLL(newitems,0,newINTEGER(1));                   //insert at front
-    insertDLL(newitems,1,newINTEGER(2));      //insert at back
-    insertDLL(newitems,2,newINTEGER(3));
-    DLL *donor = newDLL(displayINTEGER,freeINTEGER);
-    insertDLL(donor,0,newINTEGER(4));                   //insert at front
-    insertDLL(donor,1,newINTEGER(6));      //insert at back
-    insertDLL(donor,2,newINTEGER(5));
-    showItems(newitems);
-    showItems(donor);
-    unionDLL(newitems, donor);
-    showItems(newitems);
+    srandom(1);
+    DLL *p = newDLL(displayINTEGER,freeINTEGER);
+    insertDLL(p,0,newINTEGER(3));
+    insertDLL(p,sizeDLL(p),newINTEGER(2));
+    displayDLL(p,stdout);
+    printf("\n");
+    freeINTEGER(removeDLL(p,1));
+    displayDLL(p,stdout);
+    printf("\n");
+    freeINTEGER(removeDLL(p,0));
+    displayDLL(p,stdout);
+    printf("\n");
+    DLL *q = newDLL(displayINTEGER,freeINTEGER);
+    insertDLL(p,0,newINTEGER(6));
+    insertDLL(p,0,newINTEGER(7));
+    insertDLL(q,0,newINTEGER(4));
+    insertDLL(q,0,newINTEGER(5));
+    displayDLL(p,stdout);
+    printf("\n");
+    displayDLL(q,stdout);
+    printf("\n");
+    unionDLL(p,q);
+    displayDLL(p,stdout);
+    displayDLL(q,stdout);
+    printf("\n");
+    displayDLLdebug(p,stdout);
+    printf("\n");
+    displayDLLdebug(q,stdout);
+    printf("\n");
+    freeDLL(p);
+    freeDLL(q);
     return 0;
 }

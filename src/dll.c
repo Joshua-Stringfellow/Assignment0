@@ -41,7 +41,6 @@ void insertDLL(DLL *items,int index,void *value){
     //printf("Inserting At Index %d\n", index);
     if (index == 0)
     {
-        printf("Inserting value %d at head\n", *(int *)value);
 //		puts("Im in insertDLL index == 0");
         // printf("Debug 1 index = %d\n", index);
         if(sizeDLL(items) != 0)
@@ -56,7 +55,6 @@ void insertDLL(DLL *items,int index,void *value){
     }
     else if(index == sizeDLL(items))
     {
-        printf("Inserting value %d at tail\n", *(int *)value);
         NODE * temp = items->tail;
         temp-> next = node;
         node->prev = items->tail;
@@ -64,7 +62,6 @@ void insertDLL(DLL *items,int index,void *value){
     else
     {
         NODE *curr = items->head;
-        printf("Inserting value %d at mid\n", *(int *)value);
         if (index<sizeDLL(items)/2){
             for(int i=0; i<index -1; i ++){
                 curr = curr->next;
@@ -108,12 +105,14 @@ void *removeDLL(DLL *items,int index)            //returns a generic value
         if(sizeDLL(items) != 1)
         {
             items->head = curr->next;
-            items->head->prev = 0;
+            free(items->head->prev);
+           // items->head->prev = 0;
         }
         else
         {
             items->head = 0;
             items->tail = 0;
+            free(curr);
         }
     }
     else if(index == sizeDLL(items) || index == sizeDLL(items) - 1)
@@ -124,12 +123,14 @@ void *removeDLL(DLL *items,int index)            //returns a generic value
         if(sizeDLL(items) != 1)
         {
             items->tail = items->tail->prev;
-            items->tail->next = 0;
+            free(items->tail->next);
+//            items->tail->next = 0;
         }
         else
         {
             items->head = 0;
             items->tail = 0;
+            free(curr);
         }
     }
     else
@@ -150,11 +151,26 @@ void *removeDLL(DLL *items,int index)            //returns a generic value
 }
 
 void unionDLL(DLL *recipient,DLL *donor){
-    NODE *curr = recipient->tail;
-    curr->next = donor->head;
-    curr = donor->head;
-    curr->prev = recipient->tail;
-    recipient->tail = donor->tail;
+    if(recipient->head ==0 && recipient->tail ==0)
+    {
+        if(donor->head != 0 && donor->tail != 0)
+        {
+            recipient->head= donor->head;
+            recipient->tail = donor->tail;
+            recipient->size+= donor->size;
+            donor->tail =0; donor->head = 0;
+        }
+    }
+    else if(donor->head != 0 && donor->tail != 0){
+//		puts("in donor->head != 0 && donor->tail != 0 statment");
+        recipient->tail->next = donor->head;
+        donor->head->prev = recipient->tail;
+        recipient->tail = donor->tail;
+        recipient->size+= donor->size;
+        donor->tail =0; donor->head = 0;
+    }
+    donor->size = 0;
+
 }
 
 void *getDLL(DLL *items,int index){
@@ -206,11 +222,11 @@ void displayDLL(DLL *items,FILE *fp){
     //printf("Beginning Display\n");
     if(items->head == 0)
     {
-        fprintf(fp,"[]");
+        fprintf(fp,"{{}}");
         return;
     }
     NODE *curr = items->head;
-    fprintf(fp,"[");
+    fprintf(fp,"{{");
     for(int i = 0; i < items->size; i++)
     {
         if(i == items->size - 1 )
@@ -224,12 +240,13 @@ void displayDLL(DLL *items,FILE *fp){
         }
         curr = curr->next;
     }
-    fprintf(fp,"]");
+    fprintf(fp,"}}");
 }
+
 
 void displayDLLdebug(DLL *items,FILE *fp){
     if (items->size == 0) {
-        fprintf(fp, "head->{}, tail->{}");
+        fprintf(fp, "head->{{}},tail->{{}}");
     }
     else {
         NODE *curr = items->head;
@@ -240,24 +257,22 @@ void displayDLLdebug(DLL *items,FILE *fp){
                 fprintf(fp, ",");
             curr = curr->next;
         }
-        fprintf(fp,"}}, tail->{{");
+        fprintf(fp,"}},tail->{{");
         curr = items->tail;
-        while (curr != 0 ) {
-            items->display(curr->value, fp);
-            if (curr->prev != 0)
-                fprintf(fp, ",");
-            curr = curr->prev;
-        }
+        items->display(curr->value, fp);
         fprintf(fp, "}}");
     }
 }
 void freeDLL(DLL *items){
-    NODE * curr = items->head;
+    NODE * curr;
 
-    for (int i=0; i<sizeDLL(items); i++)
+    while (items->head != 0)
     {
-        items->head = curr->next;
-        free(curr);
         curr = items->head;
+        items->head = items->head->next;
+        free(curr->value);
+        free(curr);
     }
+    items->tail=NULL;
+    free(items);
 }
