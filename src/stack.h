@@ -4,7 +4,6 @@
 
 #ifndef __STACK_INCLUDED__
 #define __STACK_INCLUDED__
-
 #include <stdio.h>
 #include "dll.h"
 

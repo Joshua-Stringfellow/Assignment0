@@ -181,7 +181,7 @@ void *getDLL(DLL *items,int index){
         }
     }
     else{
-        for(int i=sizeDLL(items); i<index; i --){
+        for(int i=sizeDLL(items); i>index; i --){
             curr = curr->prev;
         }
     }
@@ -191,6 +191,7 @@ void *getDLL(DLL *items,int index){
 void *setDLL(DLL *items,int index,void *value){
     assert(index >= 0 && index <= sizeDLL(items));
     NODE *curr = items->head;
+    void *returnvalue=0;
     if (index == sizeDLL(items)){
         insertDLL(items,index,value);
         return NULL;
@@ -198,20 +199,20 @@ void *setDLL(DLL *items,int index,void *value){
     else
     {
         if (index<sizeDLL(items)/2){
-            for(int i=0; i<index; i ++){
+            for(int i=0; i<=index; i ++){
                 curr = curr->next;
             }
         }
         else{
-            for(int i=sizeDLL(items); i<index; i --){
+            for(int i=sizeDLL(items); i>index; i --){
                 curr = curr->prev;
             }
         }
-
+        returnvalue=curr->value;
         curr->value = value;
     }
 
-    return curr->value;
+    return returnvalue;
 }
 
 int sizeDLL(DLL *items){
@@ -243,7 +244,29 @@ void displayDLL(DLL *items,FILE *fp){
     fprintf(fp,"}}");
 }
 
-
+void displayFormats(DLL *items,FILE *fp){
+    if(items->head == 0)
+    {
+        fprintf(fp,"||");
+        return;
+    }
+    NODE *curr = items->head;
+    fprintf(fp,"|");
+    for(int i = 0; i < items->size; i++)
+    {
+        if(i == items->size - 1 )
+        {
+            items->display( curr->value, fp);
+        }
+        else
+        {
+            items->display(curr->value, fp);
+            fprintf(fp,",");
+        }
+        curr = curr->next;
+    }
+    fprintf(fp,"|");
+}
 void displayDLLdebug(DLL *items,FILE *fp){
     if (items->size == 0) {
         fprintf(fp, "head->{{}},tail->{{}}");

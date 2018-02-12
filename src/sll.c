@@ -156,6 +156,7 @@ void *getSLL(SLL *items,int index){
 void *setSLL(SLL *items,int index,void *value){
     assert(index >= 0 && index <= sizeSLL(items));
     NODE *curr = items->head;
+    void * returnvalue=0;
     if (index == sizeSLL(items)){
         insertSLL(items,index,value);
         return NULL;
@@ -165,10 +166,11 @@ void *setSLL(SLL *items,int index,void *value){
         for(int i=0; i<index; i ++){
             curr = curr->next;
         }
+        returnvalue = curr->value;
         curr->value = value;
     }
 
-    return curr->value;
+    return returnvalue;
 }
 
 int sizeSLL(SLL *items){
@@ -200,7 +202,29 @@ void displaySLL(SLL *items,FILE *fp){
     fprintf(fp,"}");
 }
 
-
+void displayFormatq(SLL *items,FILE *fp){
+    if(items->head == 0)
+    {
+        fprintf(fp,"<>");
+        return;
+    }
+    NODE *curr = items->head;
+    fprintf(fp,"<");
+    for(int i = 0; i < items->size; i++)
+    {
+        if(i == items->size - 1 )
+        {
+            items->display( curr->value, fp);
+        }
+        else
+        {
+            items->display(curr->value, fp);
+            fprintf(fp,",");
+        }
+        curr = curr->next;
+    }
+    fprintf(fp,">");
+}
 void displaySLLdebug(SLL *items,FILE *fp){
     if (items->size == 0) {
         fprintf(fp, "head->{},tail->{}");

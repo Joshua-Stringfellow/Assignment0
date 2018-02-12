@@ -4,15 +4,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "stack.h"
-#include "dll.h"
+
 
 struct stack{
-     DLL *list;
+    DLL *list;
+    void (*display)(void *, FILE *);
 }stack;
 
 STACK *newSTACK(void (*d)(void *,FILE *),void (*f)(void *)){
     STACK *items =malloc(sizeof(STACK));
     items->list = newDLL(d,f);
+    items->display = d;
     return items;
 }
 void push(STACK *items,void *value){
@@ -27,27 +29,16 @@ void *peekSTACK(STACK *items){
 }
 int sizeSTACK(STACK *items){ return sizeDLL(items->list);}
 
-void displaySTACK(STACK *items,FILE *fp){ if(items->list->head == 0)
-    {
-        fprintf(fp,"||");
-        return;
-    }
-    NODE *curr = items->list->head;
+void displaySTACK(STACK *items,FILE *fp){
     fprintf(fp,"|");
-    for(int i = 0; i < sizeDLL(items->list); i++)
-    {
-        if(i == items->list->size - 1 )
-        {
-            items->list->display( curr->value, fp);
-        }
-        else
-        {
-            items->list->display(curr->value, fp);
+    for(int i=0; i<sizeSTACK(items); i++){
+        items->display(getDLL(items->list,i),fp);
+        if (i < sizeSTACK(items)-1)
             fprintf(fp,",");
-        }
-        curr = curr->next;
     }
-    fprintf(fp,"|");}
+    fprintf(fp,"|");
+}
+
 
 void displaySTACKdebug(STACK *items,FILE *fp){displayDLLdebug(items->list,fp);}
 void freeSTACK(STACK *items){freeDLL(items->list);

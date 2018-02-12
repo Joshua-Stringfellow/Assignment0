@@ -29,6 +29,7 @@ extern void *getSLL(SLL *items,int index);
 extern void *setSLL(SLL *items,int index,void *value);
 extern int sizeSLL(SLL *items);
 extern void displaySLL(SLL *items,FILE *);
+extern void displayFormatq(SLL *items,FILE *);
 extern void displaySLLdebug(SLL *items,FILE *);
 extern void freeSLL(SLL *items);
 

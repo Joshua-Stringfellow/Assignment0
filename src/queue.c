@@ -9,6 +9,7 @@ QUEUE *newQUEUE(void (*d)(void *,FILE *),void (*f)(void *))   //constructor
 {
     QUEUE *items = malloc(sizeof(QUEUE));
     items->list = newSLL(d,f);
+    items->display =d;
     return items;
 }
 void enqueue(QUEUE *items,void *value)      //stores a generic value
@@ -30,28 +31,14 @@ int sizeQUEUE(QUEUE *items)
 }
 void displayQUEUE(QUEUE *items,FILE *fp)
 {
-    displaySLL(items->list,fp);
-//    if(items->list->head == 0)
-//    {
-//        fprintf(fp,"<>");
-//        return;
-//    }
-//    NODE *curr = items->list->head;
-//    fprintf(fp,"<");
-//    for(int i = 0; i < sizeSLL(items->list); i++)
-//    {
-//        if(i == items->list->size - 1 )
-//        {
-//            items->list->display( curr->value, fp);
-//        }
-//        else
-//        {
-//            items->list->display(curr->value, fp);
-//            fprintf(fp,",");
-//        }
-//        curr = curr->next;
-//    }
-//    fprintf(fp,">");
+    fprintf(fp,"<");
+    for(int i=0; i<sizeQUEUE(items); i++){
+        items->display(getSLL(items->list,i),fp);
+        if (i < sizeQUEUE(items)-1)
+            fprintf(fp,",");
+    }
+    fprintf(fp,">");
+
 }
 
 void displayQUEUEdebug(QUEUE *items, FILE *fp){displaySLLdebug(items->list,fp);}
