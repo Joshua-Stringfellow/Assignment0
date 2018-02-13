@@ -255,6 +255,42 @@ src/queue.c.s:
 	$(MAKE) -f CMakeFiles/test-queue.dir/build.make CMakeFiles/test-queue.dir/src/queue.c.s
 .PHONY : src/queue.c.s
 
+src/real.o: src/real.c.o
+
+.PHONY : src/real.o
+
+# target to build an object file
+src/real.c.o:
+	$(MAKE) -f CMakeFiles/test-queue.dir/build.make CMakeFiles/test-queue.dir/src/real.c.o
+	$(MAKE) -f CMakeFiles/test-stack.dir/build.make CMakeFiles/test-stack.dir/src/real.c.o
+	$(MAKE) -f CMakeFiles/test-dll.dir/build.make CMakeFiles/test-dll.dir/src/real.c.o
+	$(MAKE) -f CMakeFiles/test-sll.dir/build.make CMakeFiles/test-sll.dir/src/real.c.o
+.PHONY : src/real.c.o
+
+src/real.i: src/real.c.i
+
+.PHONY : src/real.i
+
+# target to preprocess a source file
+src/real.c.i:
+	$(MAKE) -f CMakeFiles/test-queue.dir/build.make CMakeFiles/test-queue.dir/src/real.c.i
+	$(MAKE) -f CMakeFiles/test-stack.dir/build.make CMakeFiles/test-stack.dir/src/real.c.i
+	$(MAKE) -f CMakeFiles/test-dll.dir/build.make CMakeFiles/test-dll.dir/src/real.c.i
+	$(MAKE) -f CMakeFiles/test-sll.dir/build.make CMakeFiles/test-sll.dir/src/real.c.i
+.PHONY : src/real.c.i
+
+src/real.s: src/real.c.s
+
+.PHONY : src/real.s
+
+# target to generate assembly for a file
+src/real.c.s:
+	$(MAKE) -f CMakeFiles/test-queue.dir/build.make CMakeFiles/test-queue.dir/src/real.c.s
+	$(MAKE) -f CMakeFiles/test-stack.dir/build.make CMakeFiles/test-stack.dir/src/real.c.s
+	$(MAKE) -f CMakeFiles/test-dll.dir/build.make CMakeFiles/test-dll.dir/src/real.c.s
+	$(MAKE) -f CMakeFiles/test-sll.dir/build.make CMakeFiles/test-sll.dir/src/real.c.s
+.PHONY : src/real.c.s
+
 src/sll.o: src/sll.c.o
 
 .PHONY : src/sll.o
@@ -441,6 +477,9 @@ help:
 	@echo "... src/queue.o"
 	@echo "... src/queue.i"
 	@echo "... src/queue.s"
+	@echo "... src/real.o"
+	@echo "... src/real.i"
+	@echo "... src/real.s"
 	@echo "... src/sll.o"
 	@echo "... src/sll.i"
 	@echo "... src/sll.s"

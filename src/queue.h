@@ -11,6 +11,7 @@
 typedef struct queue{
     SLL *list;
     void (*display)(void *, FILE *);
+    void (*free)(void *);
 } QUEUE;
 
 extern QUEUE *newQUEUE(void (*d)(void *,FILE *),void (*f)(void *));

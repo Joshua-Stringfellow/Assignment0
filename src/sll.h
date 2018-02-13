@@ -16,7 +16,7 @@ typedef struct sll {
     NODE *tail;
     int size;
     void (*display)(void *, FILE *);
-    void *free;
+    void (*free)(void* items);
 
 } SLL;
 

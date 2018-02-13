@@ -80,9 +80,9 @@ void *removeSLL(SLL *items,int index){
 //        printf("index equals head\n");
         if (sizeSLL(items) > 1)
         {
-            curr = curr->next;
-            items->head = curr;
-            //free(curr);
+            items->head = curr->next;
+//            items->head = curr;
+            free(curr);
         }
         else
         {
@@ -100,12 +100,13 @@ void *removeSLL(SLL *items,int index){
         for (int i=0; i < index - 1; i++){
             curr = curr->next;
         }
-        returnValue = getSLL(items, index);
-//        printf("The return value is %d\n", (int) returnValue);
+        returnValue = curr->next->value;
+        //printf("The return value is %f\n", *(double*) returnValue);
         if(index == sizeSLL(items) - 1)
         {
             items->tail = curr;
             free(curr->next);
+            curr->next=0;
         }
         else
         {
@@ -113,7 +114,7 @@ void *removeSLL(SLL *items,int index){
             curr->next = removedNode->next;
             //free(curr->value);
             //free(curr);
-            curr->next= curr->next->next;
+            //curr->next= curr->next->next;
         }
     }
 
@@ -146,6 +147,8 @@ void unionSLL(SLL *recipient,SLL *donor){
 void *getSLL(SLL *items,int index){
     assert(index >= 0);
     NODE *node = items->head;
+    if (index == sizeSLL(items)-1)
+        return items->tail->value;
     for(int i = 0; i<index;i++)
     {
         node = node->next;
@@ -160,6 +163,10 @@ void *setSLL(SLL *items,int index,void *value){
     if (index == sizeSLL(items)){
         insertSLL(items,index,value);
         return NULL;
+    }
+    else if(index == sizeSLL(items)-1){
+        returnvalue=items->tail->value;
+        items->tail->value = value;
     }
     else
     {
@@ -253,7 +260,8 @@ void freeSLL(SLL *items){
     {
         curr = items->head;
         items->head = items->head->next;
-        free(curr->value);
+        if (items->free != 0)
+            items->free(curr->value);
         free(curr);
     }
     items->tail=NULL;

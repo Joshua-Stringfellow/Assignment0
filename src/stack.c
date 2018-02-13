@@ -9,12 +9,14 @@
 struct stack{
     DLL *list;
     void (*display)(void *, FILE *);
+    void (*free)(void *);
 }stack;
 
 STACK *newSTACK(void (*d)(void *,FILE *),void (*f)(void *)){
     STACK *items =malloc(sizeof(STACK));
     items->list = newDLL(d,f);
     items->display = d;
+    items->free = f;
     return items;
 }
 void push(STACK *items,void *value){

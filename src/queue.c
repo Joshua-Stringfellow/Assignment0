@@ -10,6 +10,7 @@ QUEUE *newQUEUE(void (*d)(void *,FILE *),void (*f)(void *))   //constructor
     QUEUE *items = malloc(sizeof(QUEUE));
     items->list = newSLL(d,f);
     items->display =d;
+    items->free=f;
     return items;
 }
 void enqueue(QUEUE *items,void *value)      //stores a generic value

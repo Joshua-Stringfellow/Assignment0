@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "queue.h"
 #include "sll.h"
-#include "integer1.h"
+#include "integer.h"
 
 extern void srandom(unsigned int);
 extern long int random(void);

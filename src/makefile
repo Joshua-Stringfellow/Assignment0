@@ -1,12 +1,12 @@
 
-OBJS = integer.o sll.o dll.o stack.o queue.o
+OBJS = integer.o real.o sll.o dll.o stack.o queue.o
 OOPTS = -Wall -Wextra -g -c
 LOPTS = -Wall -Wextra -g
 
 all : test-sll test-dll test-stack test-queue
 
-test-sll : test-sll.o integer.o sll.o
-	gcc $(LOPTS) test-sll.o integer.o sll.o  -o test-sll
+test-sll : test-sll.o integer.o sll.o real.o
+	gcc $(LOPTS) test-sll.o integer.o real.o sll.o -o test-sll
 
 test-dll : test-dll.o integer.o dll.o
 	gcc $(LOPTS) test-dll.o integer.o dll.o -o test-dll
@@ -17,7 +17,7 @@ test-stack : test-stack.o integer.o dll.o stack.o
 test-queue : test-queue.o integer.o sll.o queue.o
 	gcc $(LOPTS) test-queue.o integer.o sll.o queue.o -o test-queue
 
-test-sll.o : test-sll.c sll.h integer.h
+test-sll.o : test-sll.c sll.h integer.h real.h
 	gcc $(OOPTS) test-sll.c
 
 test-dll.o : test-dll.c dll.h integer.h
@@ -43,6 +43,9 @@ dll.o : dll.c dll.h
 
 integer.o : integer.c integer.h
 	gcc $(OOPTS) integer.c
+
+real.o : real.c real.h
+	gcc $(OOPTS) real.c
 
 valgrind  : all
 	echo testing singly-linked list

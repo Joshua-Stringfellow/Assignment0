@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug
 CMakeFiles/test-queue.dir/all:
 	$(MAKE) -f CMakeFiles/test-queue.dir/build.make CMakeFiles/test-queue.dir/depend
 	$(MAKE) -f CMakeFiles/test-queue.dir/build.make CMakeFiles/test-queue.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles --progress-num=5,6,7,8,9 "Built target test-queue"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles --progress-num=6,7,8,9,10,11 "Built target test-queue"
 .PHONY : CMakeFiles/test-queue.dir/all
 
 # Include target in all.
@@ -76,7 +76,7 @@ all: CMakeFiles/test-queue.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test-queue.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test-queue.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/test-queue.dir/rule
@@ -103,7 +103,7 @@ clean: CMakeFiles/test-queue.dir/clean
 CMakeFiles/test-stack.dir/all:
 	$(MAKE) -f CMakeFiles/test-stack.dir/build.make CMakeFiles/test-stack.dir/depend
 	$(MAKE) -f CMakeFiles/test-stack.dir/build.make CMakeFiles/test-stack.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles --progress-num=14,15,16,17,18 "Built target test-stack"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles --progress-num=17,18,19,20,21,22 "Built target test-stack"
 .PHONY : CMakeFiles/test-stack.dir/all
 
 # Include target in all.
@@ -113,7 +113,7 @@ all: CMakeFiles/test-stack.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test-stack.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test-stack.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/test-stack.dir/rule
@@ -140,7 +140,7 @@ clean: CMakeFiles/test-stack.dir/clean
 CMakeFiles/test-dll.dir/all:
 	$(MAKE) -f CMakeFiles/test-dll.dir/build.make CMakeFiles/test-dll.dir/depend
 	$(MAKE) -f CMakeFiles/test-dll.dir/build.make CMakeFiles/test-dll.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4 "Built target test-dll"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5 "Built target test-dll"
 .PHONY : CMakeFiles/test-dll.dir/all
 
 # Include target in all.
@@ -150,7 +150,7 @@ all: CMakeFiles/test-dll.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test-dll.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test-dll.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/test-dll.dir/rule
@@ -177,7 +177,7 @@ clean: CMakeFiles/test-dll.dir/clean
 CMakeFiles/test-sll.dir/all:
 	$(MAKE) -f CMakeFiles/test-sll.dir/build.make CMakeFiles/test-sll.dir/depend
 	$(MAKE) -f CMakeFiles/test-sll.dir/build.make CMakeFiles/test-sll.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles --progress-num=10,11,12,13 "Built target test-sll"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles --progress-num=12,13,14,15,16 "Built target test-sll"
 .PHONY : CMakeFiles/test-sll.dir/all
 
 # Include target in all.
@@ -187,7 +187,7 @@ all: CMakeFiles/test-sll.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test-sll.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test-sll.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/jrstringfellow/CS201/git/Assignment0/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/test-sll.dir/rule

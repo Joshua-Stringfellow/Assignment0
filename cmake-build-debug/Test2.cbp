@@ -224,6 +224,18 @@
 		<Unit filename="/home/jrstringfellow/CS201/git/Assignment0/src/queue.h">
 			<Option target="test-queue"/>
 		</Unit>
+		<Unit filename="/home/jrstringfellow/CS201/git/Assignment0/src/real.c">
+			<Option target="test-queue"/>
+			<Option target="test-stack"/>
+			<Option target="test-dll"/>
+			<Option target="test-sll"/>
+		</Unit>
+		<Unit filename="/home/jrstringfellow/CS201/git/Assignment0/src/real.h">
+			<Option target="test-queue"/>
+			<Option target="test-stack"/>
+			<Option target="test-dll"/>
+			<Option target="test-sll"/>
+		</Unit>
 		<Unit filename="/home/jrstringfellow/CS201/git/Assignment0/src/sll.c">
 			<Option target="test-queue"/>
 			<Option target="test-sll"/>
