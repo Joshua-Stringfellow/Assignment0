@@ -68,7 +68,8 @@ void insertDLL(DLL *items,int index,void *value){
             }
         }
         else{
-            for(int i=sizeDLL(items); i<index +1; i --){
+            curr = items->tail;
+            for(int i=sizeDLL(items); i>index; i --){
                 curr = curr->prev;
             }
         }
@@ -87,9 +88,7 @@ void insertDLL(DLL *items,int index,void *value){
     items->size++;
 }
 
-void *removeDLL(DLL *items,int index)            //returns a generic value
-//ADD IF ABOUT IF IT IS GREATER THAN HALF THE INDEX, THEN START FROM THE END AND REVERSE INTO
-//THE CORRECT POSITION
+void *removeDLL(DLL *items,int index)
 {
     if (items->size == 0)
     {
@@ -105,8 +104,8 @@ void *removeDLL(DLL *items,int index)            //returns a generic value
         if(sizeDLL(items) != 1)
         {
             items->head = curr->next;
-            free(items->head->prev);
-           // items->head->prev = 0;
+            free(curr);
+            items->head->prev = 0;
         }
         else
         {
@@ -124,7 +123,7 @@ void *removeDLL(DLL *items,int index)            //returns a generic value
         {
             items->tail = items->tail->prev;
             free(items->tail->next);
-//            items->tail->next = 0;
+            items->tail->next = 0;
         }
         else
         {
@@ -136,15 +135,22 @@ void *removeDLL(DLL *items,int index)            //returns a generic value
     else
     {
         //puts("in for loop search");
-        int i;
-        for(i = 0; i < index; i++)
-        {
-            curr = curr->next;
+        if (index<sizeDLL(items)/2){
+            for(int i=0; i<index; i ++){
+                curr = curr->next;
+            }
+        }
+        else{
+            curr = items->tail;
+            for(int i=items->size; i>index; i --){
+                curr = curr->prev;
+            }
         }
         curr->next->prev= curr->prev;
         curr->prev->next = curr->next;
 
         retValue = curr->value;
+        free(curr);
     }
     items->size--;
     return retValue;
@@ -175,12 +181,15 @@ void unionDLL(DLL *recipient,DLL *donor){
 
 void *getDLL(DLL *items,int index){
     NODE *curr = items->head;
+    if (index == sizeDLL(items)-1)
+        return items->tail->value;
     if (index<sizeDLL(items)/2){
         for(int i=0; i<index; i ++){
             curr = curr->next;
         }
     }
     else{
+        curr = items->tail;
         for(int i=sizeDLL(items); i>index; i --){
             curr = curr->prev;
         }
@@ -199,11 +208,12 @@ void *setDLL(DLL *items,int index,void *value){
     else
     {
         if (index<sizeDLL(items)/2){
-            for(int i=0; i<=index; i ++){
+            for(int i=0; i<index; i ++){
                 curr = curr->next;
             }
         }
         else{
+            curr = items->tail;
             for(int i=sizeDLL(items); i>index; i --){
                 curr = curr->prev;
             }
@@ -293,7 +303,8 @@ void freeDLL(DLL *items){
     {
         curr = items->head;
         items->head = items->head->next;
-        free(curr->value);
+        if(items->free !=0)
+            items->free(curr->value);
         free(curr);
     }
     items->tail=NULL;

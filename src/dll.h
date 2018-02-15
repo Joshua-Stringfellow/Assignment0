@@ -13,7 +13,7 @@ typedef struct dll {
     NODE *tail;
     int size;
     void (*display)(void *, FILE *);
-    void *free;
+    void (*free)(void*);
 } DLL;
 
 
